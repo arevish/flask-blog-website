@@ -1,28 +1,27 @@
-{% extends 'base.html' %} {% block title %}Sign-up{% endblock %} {% block content
+{% extends 'base.html' %} {% block title %}Sign Up{% endblock %} {% block content
     %}
     <form method="POST">
       <h3 align="center">Sign Up</h3>
     
-      <div class="mb-3">
-        <label for="email" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="email" placeholder="Enter Email" aria-describedby="emailHelp"/>
+      <div class="form-group">
+        <label for="email" >Email address</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Enter Email" aria-describedby="emailHelp"/>
         <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-      </div>
-      <div class="mb-3">
-        <label for="username" class="form-label">Username</label>
-        <input type="text" class="form-control" id="username" placeholder="Enter Username"/>
-      </div>
-      <div class="mb-3">
-        <label for="password" class="form-label">Password</label>
-        <input type="password" class="form-control" id="password" placeholder="Enter Password"/>
-      </div>
-      <div class="mb-3">
-        <label for="repassword" class="form-label">Re-Enter Password</label>
-        <input type="password" class="form-control" id="repassword" placeholder="Enter Password Again"/>
-      </div>
+        
+        <label for="username" >Username</label>
+        <input type="text" class="form-control" id="username" name="username" placeholder="Enter Username"/>
+      
+      
+        <label for="password" >Password</label>
+        <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password"/>
+      
+        <label for="repassword" >Re-Enter Password</label>
+        <input type="password" class="form-control" id="repassword" name="repassword" placeholder="Enter Password Again"/>
+      <br>
       <div align="center">
       <button type="submit" class="btn btn-primary">Sign Up</button>
       </div>
+    </div>
     </form>
     {% endblock %}
     
