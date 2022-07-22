@@ -7,8 +7,18 @@
   <div class="card border-dark">
     <div class="card-header d-flex justify-content-between align-items-center">
       <a href="/posts/{{post.user.username}}">{{post.user.username}}</a>
-      {% if user.id == post.author %}
-
+      
+      <div>
+        <span id="likes-count-{{post.id}}">
+        {{post.likes|length}}</span>
+        
+        {% if user.id in post.likes|map(attribute="author")|list %}
+        <i class="fas fa-thumbs-up" id="like-button-{{post.id}}" onclick="like({{post.id}})"></i>
+        {% else %}
+        <i class="far fa-thumbs-up" id="like-button-{{post.id}}" onclick="like({{post.id}})"></i>
+        {% endif %}
+        
+        {% if user.id == post.author %}
       <div class="btn-group">
         <button
           type="button"
@@ -21,8 +31,10 @@
           </li>
         </ul>
       </div>
+    
 
       {% endif %}
+    </div>
     </div>
     <div class="card-body">
       <div class="card-text">{{post.text}}</div>
