@@ -18,6 +18,10 @@ flask
 Flask-SQLAlchemy
 flask-login
 
+## DEMO
+ ![blog website](https://user-images.githubusercontent.com/91308138/181171115-3b1ba8a7-3035-4fab-a669-326bb9f6da54.gif)
+
+
 **NOTE:** Those with Linux and MacOSX would have Python installed by default, no action required.
 
 Windows: Download the version for your laptop via https://www.python.org/downloads/
